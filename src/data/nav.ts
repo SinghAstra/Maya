@@ -2,12 +2,13 @@ export type NavItem = { label: string; href: string };
 export type NavEntry = { label: string; href?: string; folder?: NavItem[] };
 
 export const NAV: NavEntry[] = [
+  { label: "About", href: "#" },
   {
-    label: "About",
+    label: "Our Team",
     folder: [
-      { label: "About", href: "#" },
       { label: "Jennifer Anderson, LMFT", href: "#" },
       { label: "Candace Bletscher, AMFT", href: "#" },
+      { label: "Heather Williams-Baumgart, AMFT", href: "#" },
       { label: "Samantha Johnson, AMFT", href: "#" },
       { label: "Autumn Bodily, AMFT", href: "#" },
       { label: "Rosa Gomez, AMFT", href: "#" },
@@ -38,5 +39,6 @@ export const NAV: NavEntry[] = [
     ],
   },
   { label: "FAQs", href: "#" },
-  { label: "Contact", href: "#" },
 ];
+
+export const CONTACT_HREF = "#";

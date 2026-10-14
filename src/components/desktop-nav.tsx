@@ -1,4 +1,4 @@
-import { NAV } from "@/data/nav";
+import { NAV, CONTACT_HREF } from "@/data/nav";
 
 export function DesktopNav() {
   return (
@@ -11,7 +11,7 @@ export function DesktopNav() {
               {item.folder.map((f) => (
                 <li key={f.label}>
                   <a href={f.href}
-                    className="block whitespace-nowrap py-[0.75em] px-[1em] text-3.5">
+                    className="block whitespace-nowrap py-[0.75em] px-[1em] text-sm">
                     {f.label}
                   </a>
                 </li>
@@ -24,6 +24,12 @@ export function DesktopNav() {
           </a>
         )
       )}
+      <a
+        href={CONTACT_HREF}
+        className="rounded-full border border-neutral-400 px-8 py-2 uppercase tracking-widest text-xs text-neutral-500"
+      >
+        Contact
+      </a>
     </nav>
   );
 }

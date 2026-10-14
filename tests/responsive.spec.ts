@@ -29,6 +29,12 @@ test.describe("homepage responsiveness", () => {
       await expect(burger).toBeVisible();
       await burger.click();
       await expect(page.getByRole("button", { name: "Close menu" })).toBeVisible();
+      await expect(page.getByRole("button", { name: "Our Team" })).toBeVisible();
+      await page.getByRole("button", { name: "Our Team" }).click();
+      await expect(page.getByRole("button", { name: /Back/ })).toBeVisible();
+      await expect(page.getByRole("link", { name: "Jennifer Anderson, LMFT" })).toBeVisible();
+      await page.getByRole("button", { name: /Back/ }).click();
+      await expect(page.getByRole("button", { name: "Our Team" })).toBeVisible();
       await page.getByRole("button", { name: "Close menu" }).click();
       await expect(page.getByRole("button", { name: "Close menu" })).toBeHidden();
     }
