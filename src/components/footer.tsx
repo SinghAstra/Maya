@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Block } from "@/components/block";
 import { TEAM } from "@/data/team";
+import { siteConfig } from "@/config/site";
 
 export function Footer() {
   return (
@@ -21,16 +22,16 @@ export function Footer() {
             <p><strong>Navigate</strong></p>
             <div className="footer-list">
               <a href="/">Home</a>
-              <a href="#">About</a>
-              <a href="#">FAQs</a>
-              <a href="#">Contact</a>
+              <a href={siteConfig.url}>About</a>
+              <a href={siteConfig.url}>FAQs</a>
+              <a href={siteConfig.url}>Contact</a>
             </div>
           </Block>
           <Block d="1/15/8/20" m="23/2/30/8" className="block-text">
             <p><strong>Our Team</strong></p>
             <div className="footer-list">
               {TEAM.map((name) => (
-                <a key={name} href="#">
+                <a key={name} href={siteConfig.url}>
                   {name}
                 </a>
               ))}

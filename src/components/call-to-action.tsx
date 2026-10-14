@@ -1,6 +1,7 @@
 import { Block } from "@/components/block";
 import { CoverImage } from "@/components/cover-image";
 import { UnderlineButton } from "@/components/underline-button";
+import { siteConfig } from "@/config/site";
 
 export function CallToAction() {
   return (
@@ -36,7 +37,7 @@ export function CallToAction() {
             <p>Click the button below to schedule an appointment.</p>
           </Block>
           <Block d="14/5/16/15" m="21/1/23/9">
-            <UnderlineButton href="#">Book now</UnderlineButton>
+            <UnderlineButton href={siteConfig.url}>Book now</UnderlineButton>
           </Block>
           <Block d="1/17/16/25" className="img-block" m="24/2/32/9">
             <CoverImage src="/images/cta-2.jpg" alt="Welcoming therapy office" />

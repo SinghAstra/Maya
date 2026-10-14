@@ -1,4 +1,5 @@
 import { Block } from "@/components/block";
+import { siteConfig } from "@/config/site";
 
 export function LegalBar() {
   return (
@@ -10,9 +11,9 @@ export function LegalBar() {
           </Block>
           <Block d="1/19/2/25" m="2/1/3/9" className="block-text">
             <p>
-              <a href="#">Privacy Policy</a>
+              <a href={siteConfig.url}>Privacy Policy</a>
               <br />
-              <a href="#">Sitemap</a>
+              <a href={siteConfig.url}>Sitemap</a>
             </p>
           </Block>
         </div>

@@ -1,5 +1,6 @@
 import { Block } from "@/components/block";
 import { CoverImage } from "@/components/cover-image";
+import { siteConfig } from "@/config/site";
 
 export function WhoWeHelp() {
   return (
@@ -29,7 +30,7 @@ export function WhoWeHelp() {
           </Block>
           <Block d="16/11/22/18" m="31/1/37/9" className="block-text">
             <h4>
-              <a href="#">Couples</a>
+              <a href={siteConfig.url}>Couples</a>
             </h4>
             <p>
               Relationships require effort, and we&rsquo;re here to help you strengthen yours. We guide couples through
@@ -42,7 +43,7 @@ export function WhoWeHelp() {
           </Block>
           <Block d="16/18/22/25" m="48/1/54/9" className="block-text">
             <h4>
-              <a href="#">Children</a> &amp; Teens
+              <a href={siteConfig.url}>Children</a> &amp; Teens
             </h4>
             <p>
               Kids need support, too. We help them process big emotions, cope with challenging family situations, build

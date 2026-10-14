@@ -1,6 +1,7 @@
 import { Block } from "@/components/block";
 import { CoverImage } from "@/components/cover-image";
 import { UnderlineButton } from "@/components/underline-button";
+import { siteConfig } from "@/config/site";
 
 export function HowWeWork() {
   return (
@@ -43,7 +44,7 @@ export function HowWeWork() {
             </p>
           </Block>
           <Block d="21/2/23/18" m="38/1/40/9">
-            <UnderlineButton href="#">
+            <UnderlineButton href={siteConfig.url}>
               Learn more about us
             </UnderlineButton>
           </Block>

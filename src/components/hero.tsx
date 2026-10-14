@@ -1,6 +1,7 @@
 import { Block } from "@/components/block";
 import { CoverImage } from "@/components/cover-image";
 import { UnderlineButton } from "@/components/underline-button";
+import { siteConfig } from "@/config/site";
 
 export function Hero() {
   return (
@@ -27,7 +28,7 @@ export function Hero() {
             </p>
           </Block>
           <Block d="15/11/17/23" m="12/1/14/9">
-            <UnderlineButton href="#">Book an Appointment</UnderlineButton>
+            <UnderlineButton href={siteConfig.url}>Book an Appointment</UnderlineButton>
           </Block>
           <Block d="2/1/17/9" className="img-block" m="15/1/24/7">
             <CoverImage src="/images/hero-1.jpg" alt="Counselor speaking with a client" />

@@ -180,6 +180,15 @@ a {
   text-decoration: none;
 }
 
+a,
+button,
+[role="button"],
+summary,
+label[for],
+select {
+  cursor: pointer;
+}
+
 .fe-grid {
   --container-width: min(var(--max-page-width), calc(100vw - var(--page-padding) * 2));
   display: grid;
