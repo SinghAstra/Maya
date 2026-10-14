@@ -22,7 +22,7 @@ export function Hero() {
               </strong>
               .
             </h1>
-            <p style={{ marginTop: 27 }}>
+            <p className="mt-[27px]">
               Specialized therapy for adults, couples, teens, and children to reflect, heal, and grow.
             </p>
           </Block>

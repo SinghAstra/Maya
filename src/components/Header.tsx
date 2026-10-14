@@ -10,18 +10,17 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="absolute top-0 left-0 w-full z-50" style={{ height: 99, padding: "0 1.4vw" }}>
+    <header className="absolute top-0 left-0 z-50 h-[99px] w-full px-[1.4vw]">
       <div className="h-full flex items-center justify-between">
         <Link href="/" aria-label="Conejo Valley Family Counseling home" className="shrink-0">
           <Image src="/images/logo.png" alt="Conejo Valley Counseling" width={200} height={75} priority
-            style={{ height: 75, width: "auto" }} />
+            className="h-[75px] w-auto" />
         </Link>
 
         <DesktopNav />
 
         <button
-          className="lg:hidden flex flex-col justify-center gap-1.5"
-          style={{ width: 34, height: 34 }}
+          className="lg:hidden flex flex-col justify-center gap-1.5 size-[34px]"
           aria-label="Open menu"
           onClick={() => setMenuOpen(true)}
         >

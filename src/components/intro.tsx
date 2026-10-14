@@ -3,7 +3,7 @@ import { CoverImage } from "@/components/cover-image";
 
 export function Intro() {
   return (
-    <section className="section bg-cream" style={{ minHeight: "70vh" }}>
+    <section className="section bg-cream min-h-[70vh]">
       <div className="container-page">
         <div className="fe-grid">
           <Block d="4/2/8/15" m="1/1/5/9">

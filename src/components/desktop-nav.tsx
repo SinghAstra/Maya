@@ -2,7 +2,7 @@ import { NAV } from "@/data/nav";
 
 export function DesktopNav() {
   return (
-    <nav className="hidden lg:flex items-center" style={{ gap: "2vw" }}>
+    <nav className="hidden lg:flex items-center gap-[2vw]">
       {NAV.map((item) =>
         item.folder ? (
           <div key={item.label} className="relative group">
@@ -11,8 +11,7 @@ export function DesktopNav() {
               {item.folder.map((f) => (
                 <li key={f.label}>
                   <a href={f.href}
-                    className="block whitespace-nowrap"
-                    style={{ padding: "0.75em 1em", fontSize: 14 }}>
+                    className="block whitespace-nowrap py-[0.75em] px-[1em] text-[14px]">
                     {f.label}
                   </a>
                 </li>

@@ -2,9 +2,9 @@ import { Block } from "@/components/block";
 
 export function LegalBar() {
   return (
-    <div className="bg-teal" style={{ padding: "20px 0" }}>
+    <div className="bg-teal py-5">
       <div className="container-page">
-        <div className="fe-grid" style={{ gridAutoRows: "auto" }}>
+        <div className="fe-grid auto-rows-auto">
           <Block d="1/1/2/17" m="1/1/2/9" className="block-text">
             <p>© 2025 Conejo Valley Family Counseling</p>
           </Block>
