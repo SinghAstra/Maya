@@ -1,4 +1,3 @@
-import { ORIGINAL_SITE_URL } from "@/config/site";
 import { Block } from "@/components/block";
 import { CoverImage } from "@/components/cover-image";
 import { UnderlineButton } from "@/components/underline-button";
@@ -44,7 +43,7 @@ export function HowWeWork() {
             </p>
           </Block>
           <Block d="21/2/23/18" m="38/1/40/9">
-            <UnderlineButton href={`${ORIGINAL_SITE_URL}/therapists-newbury-park`}>
+            <UnderlineButton href="#">
               Learn more about us
             </UnderlineButton>
           </Block>
