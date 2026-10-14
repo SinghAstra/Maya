@@ -42,7 +42,7 @@ export function MobileMenu({ onClose }: { onClose: () => void }) {
         <nav
           className={`absolute inset-0 flex flex-col items-start justify-center px-10 overflow-y-auto ${SLIDE} ${open ? "-translate-x-full" : "translate-x-0"}`}
         >
-          <div className="flex flex-col gap-[39px] py-10">
+          <div className="flex flex-col gap-12 py-10">
             {NAV.map((item) =>
               item.folder ? (
                 <button
@@ -81,9 +81,9 @@ export function MobileMenu({ onClose }: { onClose: () => void }) {
               onClick={() => setOpenFolder(null)}
               className={`flex items-center gap-2 mb-10 opacity-50 ${MENU_TEXT}`}
             >
-              <span className="text-ink text-[0.55em]">‹</span> Back
+              <span className="text-ink text-[0.55em] my-2">‹</span> Back
             </button>
-            <div className="flex flex-col gap-[39px] pb-10">
+            <div className="flex flex-col gap-12 pb-10">
               {folder.folder!.map((f) => (
                 <a key={f.label} href={f.href} className={MENU_TEXT}>
                   {f.label}
