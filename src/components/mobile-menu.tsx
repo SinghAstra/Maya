@@ -1,11 +1,9 @@
-import { useEffect, useRef, useState } from "react";
-import { MenuSubmenu } from "@/components/menu-submenu";
+import { useEffect, useState } from "react";
 import { NAV, CONTACT_HREF, type NavEntry } from "@/data/nav";
 
 export function MobileMenu() {
   const [submenu, setSubmenu] = useState<NavEntry | null>(null);
   const [visible, setVisible] = useState(false);
-  const submenuRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -17,15 +15,6 @@ export function MobileMenu() {
   const open = (entry: NavEntry) => {
     setSubmenu(entry);
     requestAnimationFrame(() => requestAnimationFrame(() => setVisible(true)));
-  };
-
-  const close = () => {
-    setVisible(false);
-    submenuRef.current?.addEventListener(
-      "transitionend",
-      () => setSubmenu(null),
-      { once: true }
-    );
   };
 
   return (
@@ -61,7 +50,24 @@ export function MobileMenu() {
         </nav>
 
         {submenu?.folder && (
-          <MenuSubmenu ref={submenuRef} items={submenu.folder} visible={visible} onBack={close} />
+          <nav
+            aria-hidden={!visible}
+            className={`absolute inset-0 flex flex-col items-start px-menu-x pt-header pb-8 overflow-y-auto menu-slide ${visible ? "translate-x-0" : "translate-x-full"}`}
+          >
+            <button
+              onClick={() => setVisible(false)}
+              className="flex items-center gap-2 my-10 opacity-50 menu-item"
+            >
+              <span className="text-ink text-chevron">‹</span> Back
+            </button>
+            <div className="flex flex-col gap-menu pb-10">
+              {submenu.folder.map((item) => (
+                <a key={item.label} href={item.href} className="menu-item">
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          </nav>
         )}
       </div>
     </div>
