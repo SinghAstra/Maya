@@ -1,0 +1,325 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Design tokens — measured from the original site
+   (see design-reference.md; do not change values by hand)
+   ============================================================ */
+:root {
+  /* Palette (site.css :root HSL vars) */
+  --color-white: #ffffff; /* --white-hsl */
+  --color-ink: #2b2b2b; /* --black-hsl */
+  --color-accent: #efd9bf; /* --accent-hsl (peach) */
+  --color-cream: #f7f2ec; /* --lightAccent-hsl */
+  --color-teal: #86b3b3; /* --darkAccent-hsl */
+  --color-line: #515151; /* button underline */
+
+  /* Layout */
+  --max-page-width: 1800px;
+  --page-padding: 5vw;
+
+  /* Fluid type (Squarespace formula, 1rem = 15px):
+     size = min((value-1)*1.2vw + 15px,
+                max((value-1)*21.6px + 15px, value*15px)) */
+  --fs-h1: min(calc((3.6 - 1) * 1.2vw + 15px), max(calc((3.6 - 1) * 21.6px + 15px), 54px));
+  --fs-h2: min(calc((2.9 - 1) * 1.2vw + 15px), max(calc((2.9 - 1) * 21.6px + 15px), 43.5px));
+  --fs-h3: min(calc((2.4 - 1) * 1.2vw + 15px), max(calc((2.4 - 1) * 21.6px + 15px), 36px));
+  --fs-h4: min(calc((1.7 - 1) * 1.2vw + 15px), max(calc((1.7 - 1) * 21.6px + 15px), 25.5px));
+  --fs-button: min(
+    calc((0.85 - 1) * 1.2vw + 15px),
+    max(calc((0.85 - 1) * 21.6px + 15px), 12.75px)
+  );
+  --fs-nav: min(calc((0.9 - 1) * 1.2vw + 15px), max(calc((0.9 - 1) * 21.6px + 15px), 13.5px));
+
+  /* Line-height: 1.4 * (1 + (1-value)/25) */
+  --lh-h1: calc(1.4 * (1 + (1 - 3.6) / 25));
+  --lh-h2: calc(1.4 * (1 + (1 - 2.9) / 25));
+  --lh-h3: calc(1.4 * (1 + (1 - 2.4) / 25));
+  --lh-h4: calc(1.4 * (1 + (1 - 1.7) / 25));
+}
+
+@theme inline {
+  --color-white: var(--color-white);
+  --color-ink: var(--color-ink);
+  --color-accent: var(--color-accent);
+  --color-cream: var(--color-cream);
+  --color-teal: var(--color-teal);
+  --color-line: var(--color-line);
+
+  --font-heading: var(--font-beaufort), serif;
+  --font-body: var(--font-muli), sans-serif;
+  --font-script: var(--font-script), cursive;
+}
+
+body {
+  background: var(--color-white);
+  color: var(--color-ink);
+  font-family: var(--font-muli), sans-serif;
+  font-weight: 300;
+  font-size: 15px; /* --base-font-size */
+  line-height: 27px;
+}
+
+/* ---------- Typography (custom.css rules) ---------- */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-beaufort), serif;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+}
+h1 em,
+h2 em,
+h3 em,
+h4 em {
+  font-style: italic;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+}
+h4 {
+  font-size: var(--fs-h4);
+  line-height: var(--lh-h4);
+}
+
+/* Script accent words: <strong><em>word</em></strong> inside headings */
+h1 strong em,
+h2 strong em,
+h3 strong em,
+h4 strong em {
+  font-family: var(--font-script), cursive;
+  font-weight: 400;
+  font-style: normal !important;
+  font-size: 1em;
+  letter-spacing: 0;
+  line-height: 0.7em;
+  color: var(--color-teal);
+}
+
+/* Eyebrow / caps lines: .sqsrte-large strong em */
+.sqsrte-large strong em {
+  font-size: 1em;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.12em;
+  text-transform: uppercase !important;
+  font-family: var(--font-muli), sans-serif;
+}
+
+/* ---------- Container ---------- */
+.container-page {
+  width: 100%;
+  max-width: var(--max-page-width);
+  margin-inline: auto;
+  padding-inline: var(--page-padding);
+}
+
+/* ---------- Buttons: outline + underline shape ---------- */
+/* style: primary-button-style-outline primary-button-shape-underline */
+.btn-primary {
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-muli), sans-serif;
+  font-size: var(--fs-button);
+  font-weight: 400;
+  line-height: 1.2em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  background: transparent;
+  padding: 0.6rem 0;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid var(--color-line);
+  transition-duration: 1s;
+}
+.btn-primary:hover::before {
+  right: 100%; /* underline wipes out left→right */
+}
+
+/* ---------- Nav link hover underline ---------- */
+.nav-link {
+  font-family: var(--font-muli), sans-serif;
+  font-size: var(--fs-nav);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  position: relative;
+}
+.nav-link::after {
+  display: block;
+  content: "";
+  background: var(--color-ink);
+  height: 1px;
+  width: 0;
+  margin-top: -2px;
+  margin-right: auto;
+  transition: width 0.5s;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ---------- "Learn more" style links ---------- */
+.link-caps {
+  font-family: var(--font-muli), sans-serif;
+  font-size: var(--fs-button);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ============================================================
+   Fluid engine grid (replicates Squarespace 24/8-col grid)
+   grid-area vars: --ad = desktop (>=768), --am = mobile (<768)
+   values pre-mapped: original col lines minus 1, clamped
+   ============================================================ */
+.fe-grid {
+  --container-width: min(var(--max-page-width), calc(100vw - var(--page-padding) * 2));
+  display: grid;
+  grid-template-columns: repeat(24, minmax(0, 1fr));
+  grid-auto-rows: minmax(calc(var(--container-width) * 0.0215), auto);
+  align-items: stretch;
+  row-gap: 11px;
+  column-gap: 11px;
+}
+@media (max-width: 767px) {
+  .fe-grid {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+}
+.fe-block {
+  grid-area: var(--am);
+  position: relative;
+  min-width: 0;
+}
+@media (min-width: 768px) {
+  .fe-block {
+    grid-area: var(--ad);
+  }
+}
+.fe-block img,
+.fe-block .cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Image blocks: fill the grid cell even when the cell's height comes from
+   stretch (no in-flow content to give the <img> a % basis). */
+.fe-block.img-block {
+  overflow: hidden;
+}
+.fe-block.img-block .cover-img {
+  position: absolute;
+  inset: 0;
+}
+
+/* ============================================================
+   Sections
+   ============================================================ */
+.section {
+  position: relative;
+  padding: 6.6vmax 0;
+}
+.sec-medium {
+  min-height: 66vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.bg-cream {
+  background: var(--color-cream);
+}
+.bg-white {
+  background: var(--color-white);
+}
+.bg-peach {
+  background: var(--color-accent);
+}
+.bg-teal {
+  background: var(--color-teal);
+}
+.bg-quote {
+  background: linear-gradient(rgba(43, 43, 43, 0.54), rgba(43, 43, 43, 0.54)),
+    url("/images/quote-bg.png") center / cover no-repeat, var(--color-ink);
+}
+/* First section: header overlays it */
+.section-first {
+  padding-top: 6.6vmax;
+}
+
+/* Eyebrow: .sqsrte-large (fluid = 1rem here) */
+.eyebrow {
+  font-family: var(--font-muli), sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.8em;
+  white-space: pre-wrap;
+}
+.eyebrow strong em {
+  font-style: normal !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.12em;
+  text-transform: uppercase !important;
+  font-family: var(--font-muli), sans-serif;
+}
+
+/* Body paragraph inside blocks */
+.block-text p {
+  font-size: 15px;
+  line-height: 27px;
+  font-weight: 300;
+}
+.block-text p + p {
+  margin-top: 27px;
+}
+
+/* HR divider in expertise list */
+.rule-block {
+  width: 100%;
+  height: 1px;
+  background: #515151;
+}
+
+/* Quote section text is cream */
+.quote-text {
+  color: #f6f4ee;
+}
+
+/* Footer link lists */
+.footer-list a {
+  display: block;
+  padding: 2px 0;
+}
+.footer-list a:hover {
+  text-decoration: underline;
+}
