@@ -267,6 +267,7 @@ a {
   font-size: 15px;
   line-height: 27px;
   font-weight: 300;
+  overflow-wrap: anywhere;
 }
 .block-text p + p {
   margin-top: 27px;
