@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ORIGINAL_SITE_URL } from "@/config/site";
 import { Block } from "@/components/block";
 import { TEAM } from "@/data/team";
 
@@ -21,9 +22,9 @@ export function Footer() {
             <p><strong>Navigate</strong></p>
             <div className="footer-list">
               <a href="/">Home</a>
-              <a href="https://www.conejovalleycounseling.com/therapists-newbury-park">About</a>
-              <a href="https://www.conejovalleycounseling.com/faqs">FAQs</a>
-              <a href="https://www.conejovalleycounseling.com/contact">Contact</a>
+              <a href={`${ORIGINAL_SITE_URL}/therapists-newbury-park`}>About</a>
+              <a href={`${ORIGINAL_SITE_URL}/faqs`}>FAQs</a>
+              <a href={`${ORIGINAL_SITE_URL}/contact`}>Contact</a>
             </div>
           </Block>
           <Block d="1/15/8/20" m="23/2/30/8" className="block-text">

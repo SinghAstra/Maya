@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { beaufort, muli, printedMoments } from "@/fonts/fonts";
+import { siteConfig } from "@/config/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Conejo Valley Family Counseling — Clone",
-  description:
-    "Specialized therapy for adults, couples, teens, and children to reflect, heal, and grow.",
+  metadataBase: new URL(siteConfig.url),
+  title: `${siteConfig.name} — Clone`,
+  description: siteConfig.description,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
