@@ -58,7 +58,6 @@ export default function Header() {
             style={{ height: 75, width: "auto" }} />
         </Link>
 
-        {/* Desktop nav */}
         <nav className="hidden lg:flex items-center" style={{ gap: "2vw" }}>
           {NAV.map((item) =>
             item.folder ? (
@@ -84,7 +83,6 @@ export default function Header() {
           )}
         </nav>
 
-        {/* Mobile hamburger */}
         <button
           className="lg:hidden flex flex-col justify-center gap-[6px]"
           style={{ width: 34, height: 34 }}
@@ -97,7 +95,6 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile overlay menu */}
       {menuOpen && (
         <div className="fixed inset-0 bg-cream z-50 lg:hidden overflow-y-auto">
           <div className="flex justify-between items-center" style={{ padding: "1.4vw 6vw", height: 99 }}>
