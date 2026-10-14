@@ -23,7 +23,7 @@ function ExpertiseColumn({ items }: { items: ExpertiseItem[] }) {
 
 export function Expertise() {
   return (
-    <section className="section bg-white min-h-[80vh]">
+    <section className="section bg-white min-h-showcase">
       <div className="container-page">
         <div className="fe-grid">
           <Block d="1/2/4/8" m="1/1/3/9">

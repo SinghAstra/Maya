@@ -2,7 +2,7 @@ import { NAV, CONTACT_HREF } from "@/data/nav";
 
 export function DesktopNav() {
   return (
-    <nav className="hidden lg:flex items-center gap-[2vw]">
+    <nav className="hidden lg:flex items-center gap-nav">
       {NAV.map((item) =>
         item.folder ? (
           <div key={item.label} className="relative group">
@@ -11,7 +11,7 @@ export function DesktopNav() {
               {item.folder.map((f) => (
                 <li key={f.label}>
                   <a href={f.href}
-                    className="block whitespace-nowrap py-[0.75em] px-[1em] text-sm">
+                    className="block whitespace-nowrap py-dropdown-y px-dropdown-x text-nav">
                     {f.label}
                   </a>
                 </li>
@@ -26,7 +26,7 @@ export function DesktopNav() {
       )}
       <a
         href={CONTACT_HREF}
-        className="rounded-full border border-neutral-400 px-8 py-2 uppercase tracking-widest text-xs text-neutral-500"
+        className="contact-pill"
       >
         Contact
       </a>

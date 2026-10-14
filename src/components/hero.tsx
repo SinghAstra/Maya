@@ -23,7 +23,7 @@ export function Hero() {
               </strong>
               .
             </h1>
-            <p className="mt-6.75">
+            <p className="mt-block">
               Specialized therapy for adults, couples, teens, and children to reflect, heal, and grow.
             </p>
           </Block>

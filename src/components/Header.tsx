@@ -10,17 +10,17 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="absolute top-0 left-0 z-50 h-24.75 w-full px-[1.4vw]">
+    <header className="absolute top-0 left-0 z-50 h-header w-full px-header-x">
       <div className="h-full flex items-center justify-between">
         <Link href="/" aria-label="Conejo Valley Family Counseling home" className="shrink-0">
           <Image src="/images/logo.png" alt="Conejo Valley Counseling" width={200} height={75} priority
-            className="h-18.75 w-auto" />
+            className="h-logo w-auto" />
         </Link>
 
         <DesktopNav />
 
         <button
-          className="lg:hidden flex flex-col justify-center gap-1.5 size-8.5"
+          className="lg:hidden flex flex-col justify-center gap-1.5 size-burger"
           aria-label="Open menu"
           onClick={() => setMenuOpen(true)}
         >

@@ -5,12 +5,12 @@ import { siteConfig } from "@/config/site";
 
 export function Footer() {
   return (
-    <footer className="section bg-white min-h-[45vh]">
+    <footer className="section bg-white min-h-footer">
       <div className="container-page">
         <div className="fe-grid">
           <Block d="1/1/5/8" m="2/1/5/9">
             <Image src="/images/logo.png" alt="Conejo Valley Counseling" width={220} height={82}
-              className="h-auto w-full max-w-55" />
+              className="h-auto w-full max-w-brand" />
           </Block>
           <Block d="4/1/9/9" m="5/1/10/9" className="block-text">
             <p>
