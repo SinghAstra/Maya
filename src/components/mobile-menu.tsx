@@ -79,9 +79,9 @@ export function MobileMenu({ onClose }: { onClose: () => void }) {
           >
             <button
               onClick={() => setOpenFolder(null)}
-              className={`flex items-center gap-2 mb-10 ${MENU_TEXT}`}
+              className={`flex items-center gap-2 mb-10 opacity-50 ${MENU_TEXT}`}
             >
-              <span className="text-neutral-500 text-[0.55em]">‹</span> Back
+              <span className="text-ink text-[0.55em]">‹</span> Back
             </button>
             <div className="flex flex-col gap-[39px] pb-10">
               {folder.folder!.map((f) => (
