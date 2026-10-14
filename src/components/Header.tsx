@@ -20,14 +20,14 @@ export default function Header() {
         <DesktopNav />
 
         <button
-          className="lg:hidden flex flex-col justify-center gap-[6px]"
+          className="lg:hidden flex flex-col justify-center gap-1.5"
           style={{ width: 34, height: 34 }}
           aria-label="Open menu"
           onClick={() => setMenuOpen(true)}
         >
-          <span className="block w-full h-[2px] bg-ink" />
-          <span className="block w-full h-[2px] bg-ink" />
-          <span className="block w-full h-[2px] bg-ink" />
+          <span className="block w-full h-0.5 bg-ink" />
+          <span className="block w-full h-0.5 bg-ink" />
+          <span className="block w-full h-0.5 bg-ink" />
         </button>
       </div>
 
