@@ -11,7 +11,7 @@ export function DesktopNav() {
               {item.folder.map((f) => (
                 <li key={f.label}>
                   <a href={f.href}
-                    className="block whitespace-nowrap py-[0.75em] px-[1em] text-[14px]">
+                    className="block whitespace-nowrap py-[0.75em] px-[1em] text-3.5">
                     {f.label}
                   </a>
                 </li>

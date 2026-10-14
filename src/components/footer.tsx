@@ -9,7 +9,7 @@ export function Footer() {
         <div className="fe-grid">
           <Block d="1/1/5/8" m="2/1/5/9">
             <Image src="/images/logo.png" alt="Conejo Valley Counseling" width={220} height={82}
-              className="h-auto w-full max-w-[220px]" />
+              className="h-auto w-full max-w-55" />
           </Block>
           <Block d="4/1/9/9" m="5/1/10/9" className="block-text">
             <p>
