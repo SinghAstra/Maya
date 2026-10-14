@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <header className="absolute top-0 left-0 z-50 h-header w-full px-header-x">
-      <div className="h-full flex items-center justify-between">
+      <div className="relative z-50 h-full flex items-center justify-between">
         <Link href="/" aria-label="Conejo Valley Family Counseling home" className="shrink-0">
           <Image src="/images/logo.png" alt="Conejo Valley Counseling" width={200} height={75} priority
             className="h-logo w-auto" />
@@ -20,17 +20,23 @@ export default function Header() {
         <DesktopNav />
 
         <button
-          className="lg:hidden flex flex-col justify-center gap-1.5 size-burger"
-          aria-label="Open menu"
-          onClick={() => setMenuOpen(true)}
+          className="lg:hidden flex flex-col items-center justify-center gap-1.5 size-burger"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          onClick={() => setMenuOpen((open) => !open)}
         >
-          <span className="block w-full h-0.5 bg-ink" />
-          <span className="block w-full h-0.5 bg-ink" />
-          <span className="block w-full h-0.5 bg-ink" />
+          {menuOpen ? (
+            <span className="text-close leading-none text-ink">×</span>
+          ) : (
+            <>
+              <span className="block w-full h-0.5 bg-ink" />
+              <span className="block w-full h-0.5 bg-ink" />
+              <span className="block w-full h-0.5 bg-ink" />
+            </>
+          )}
         </button>
       </div>
 
-      {menuOpen && <MobileMenu onClose={() => setMenuOpen(false)} />}
+      {menuOpen && <MobileMenu />}
     </header>
   );
 }

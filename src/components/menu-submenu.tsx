@@ -14,7 +14,7 @@ export const MenuSubmenu = forwardRef<HTMLElement, Props>(function MenuSubmenu(
     <nav
       ref={ref}
       aria-hidden={!visible}
-      className={`absolute inset-0 flex flex-col items-start px-menu-x pt-2 pb-8 overflow-y-auto menu-slide ${offset}`}
+      className={`absolute inset-0 flex flex-col items-start px-menu-x pt-header pb-8 overflow-y-auto menu-slide ${offset}`}
     >
       <button
         onClick={onBack}
