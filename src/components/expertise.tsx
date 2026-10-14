@@ -8,11 +8,11 @@ function ExpertiseColumn({ items }: { items: ExpertiseItem[] }) {
       {items.map((item) => (
         <Fragment key={item.label}>
           {item.desktop.rule && (
-            <Block d={item.desktop.rule} m={item.mobile.rule!}>
+            <Block desktop={item.desktop.rule} mobile={item.mobile.rule!}>
               <div className="rule-block" />
             </Block>
           )}
-          <Block d={item.desktop.text} m={item.mobile.text} className="block-text">
+          <Block desktop={item.desktop.text} mobile={item.mobile.text} className="block-text">
             <p>{item.label}</p>
           </Block>
         </Fragment>
@@ -26,7 +26,7 @@ export function Expertise() {
     <section className="section bg-white min-h-showcase">
       <div className="container-page">
         <div className="fe-grid">
-          <Block d="1/2/4/8" m="1/1/3/9">
+          <Block desktop="1/2/4/8" mobile="1/1/3/9">
             <h3>
               Our areas of{" "}
               <strong>

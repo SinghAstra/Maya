@@ -8,17 +8,17 @@ export function Footer() {
     <footer className="section bg-white min-h-footer">
       <div className="container-page">
         <div className="fe-grid">
-          <Block d="1/1/5/8" m="2/1/5/9">
+          <Block desktop="1/1/5/8" mobile="2/1/5/9">
             <Image src="/images/logo.png" alt="Conejo Valley Counseling" width={220} height={82}
               className="h-auto w-full max-w-brand" />
           </Block>
-          <Block d="4/1/9/9" m="5/1/10/9" className="block-text">
+          <Block desktop="4/1/9/9" mobile="5/1/10/9" className="block-text">
             <p>
               We want to make getting started simple. You&rsquo;re welcome to come into our office in Newbury Park or
               schedule virtual appointments from anywhere in CA&mdash;whatever works best for you.
             </p>
           </Block>
-          <Block d="1/11/6/15" m="10/2/15/8" className="block-text">
+          <Block desktop="1/11/6/15" mobile="10/2/15/8" className="block-text">
             <p><strong>Navigate</strong></p>
             <div className="footer-list">
               <a href="/">Home</a>
@@ -27,7 +27,7 @@ export function Footer() {
               <a href={siteConfig.url}>Contact</a>
             </div>
           </Block>
-          <Block d="1/15/8/20" m="23/2/30/8" className="block-text">
+          <Block desktop="1/15/8/20" mobile="23/2/30/8" className="block-text">
             <p><strong>Our Team</strong></p>
             <div className="footer-list">
               {TEAM.map((name) => (
@@ -37,7 +37,7 @@ export function Footer() {
               ))}
             </div>
           </Block>
-          <Block d="1/20/10/25" m="15/2/23/8" className="block-text">
+          <Block desktop="1/20/10/25" mobile="15/2/23/8" className="block-text">
             <p><strong>Contact</strong></p>
             <p>
               925 Broadbeck Dr

@@ -8,7 +8,7 @@ export function Specialties() {
     <section className="section bg-white">
       <div className="container-page">
         <div className="fe-grid">
-          <Block d="3/2/7/9" m="3/1/5/9">
+          <Block desktop="3/2/7/9" mobile="3/1/5/9">
             <h3>
               Our{" "}
               <strong>
@@ -19,11 +19,11 @@ export function Specialties() {
           </Block>
           {SPECIALTIES.map((item) => (
             <Fragment key={item.title}>
-              <Block d={item.desktop.card} m={item.mobile.card} className="block-text">
+              <Block desktop={item.desktop.card} mobile={item.mobile.card} className="block-text">
                 <h4>{item.title}</h4>
                 <p>{item.body}</p>
               </Block>
-              <Block d={item.desktop.button} m={item.mobile.button}>
+              <Block desktop={item.desktop.button} mobile={item.mobile.button}>
                 <UnderlineButton href={item.href}>Learn more</UnderlineButton>
               </Block>
             </Fragment>

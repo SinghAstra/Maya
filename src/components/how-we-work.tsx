@@ -8,20 +8,20 @@ export function HowWeWork() {
     <section className="section bg-peach">
       <div className="container-page">
         <div className="fe-grid">
-          <Block d="4/2/6/14" m="3/1/5/9">
+          <Block desktop="4/2/6/14" mobile="3/1/5/9">
             <p className="eyebrow">
               <strong>
                 <em>HOW WE WORK</em>
               </strong>
             </p>
           </Block>
-          <Block d="8/2/10/19" m="5/1/8/8">
+          <Block desktop="8/2/10/19" mobile="5/1/8/8">
             <h2>We&rsquo;re here to make a difference.</h2>
           </Block>
-          <Block d="4/20/22/25" className="img-block" m="9/1/17/9">
+          <Block desktop="4/20/22/25" className="img-block" mobile="9/1/17/9">
             <CoverImage src="/images/how-we-work.jpg" alt="Warm therapy office" />
           </Block>
-          <Block d="11/2/20/10" m="18/1/28/9" className="block-text">
+          <Block desktop="11/2/20/10" mobile="18/1/28/9" className="block-text">
             <p>
               The clients we work with are balancing so many things at once, it&rsquo;s often hard for them to put
               themselves first.
@@ -33,7 +33,7 @@ export function HowWeWork() {
               &ldquo;one-size-fits-all&rdquo; here.) If you&rsquo;re ready to do the work, we&rsquo;re ready to help.
             </p>
           </Block>
-          <Block d="11/10/20/18" m="28/1/38/9" className="block-text">
+          <Block desktop="11/10/20/18" mobile="28/1/38/9" className="block-text">
             <p>
               Sometimes we may gently challenge you to look at things differently and other times we may explore your
               emotions, all while encouraging you to practice what you&rsquo;ve learned in your daily life. We take what
@@ -43,7 +43,7 @@ export function HowWeWork() {
               for you.
             </p>
           </Block>
-          <Block d="21/2/23/18" m="38/1/40/9">
+          <Block desktop="21/2/23/18" mobile="38/1/40/9">
             <UnderlineButton href={siteConfig.url}>
               Learn more about us
             </UnderlineButton>

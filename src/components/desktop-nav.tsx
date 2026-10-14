@@ -7,7 +7,7 @@ export function DesktopNav() {
         item.folder ? (
           <div key={item.label} className="relative group">
             <span className="nav-link cursor-pointer">{item.label}</span>
-            <ul className="absolute left-0 top-full pt-3 hidden group-hover:block bg-white shadow-md border border-neutral-100 z-50">
+            <ul className="absolute left-0 top-full pt-3 hidden group-hover:block bg-cream shadow-md border border-neutral-100 z-50">
               {item.folder.map((f) => (
                 <li key={f.label}>
                   <a href={f.href}

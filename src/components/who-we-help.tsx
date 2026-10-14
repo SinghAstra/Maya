@@ -7,7 +7,7 @@ export function WhoWeHelp() {
     <section className="section sec-medium bg-white">
       <div className="container-page">
         <div className="fe-grid">
-          <Block d="1/1/3/9" m="1/1/3/9">
+          <Block desktop="1/1/3/9" mobile="1/1/3/9">
             <h2>
               Who we{" "}
               <strong>
@@ -15,20 +15,20 @@ export function WhoWeHelp() {
               </strong>
             </h2>
           </Block>
-          <Block d="4/4/15/11" className="img-block" m="4/1/13/9">
+          <Block desktop="4/4/15/11" className="img-block" mobile="4/1/13/9">
             <CoverImage src="/images/adults.jpg" alt="Adults in therapy" />
           </Block>
-          <Block d="16/4/21/11" m="14/1/20/9" className="block-text">
+          <Block desktop="16/4/21/11" mobile="14/1/20/9" className="block-text">
             <h4>Adults</h4>
             <p>
               Feeling stuck or overwhelmed? We help adults find clarity, build resilience, and move forward with
               confidence by addressing the root causes of anxiety, stress, and emotional pain.
             </p>
           </Block>
-          <Block d="4/11/15/18" className="img-block" m="21/1/30/9">
+          <Block desktop="4/11/15/18" className="img-block" mobile="21/1/30/9">
             <CoverImage src="/images/couples.jpg" alt="Couple in therapy" />
           </Block>
-          <Block d="16/11/22/18" m="31/1/37/9" className="block-text">
+          <Block desktop="16/11/22/18" mobile="31/1/37/9" className="block-text">
             <h4>
               <a href={siteConfig.url}>Couples</a>
             </h4>
@@ -38,10 +38,10 @@ export function WhoWeHelp() {
               your relationship.
             </p>
           </Block>
-          <Block d="4/18/15/25" className="img-block" m="38/1/47/9">
+          <Block desktop="4/18/15/25" className="img-block" mobile="38/1/47/9">
             <CoverImage src="/images/children.jpg" alt="Children and teens in therapy" />
           </Block>
-          <Block d="16/18/22/25" m="48/1/54/9" className="block-text">
+          <Block desktop="16/18/22/25" mobile="48/1/54/9" className="block-text">
             <h4>
               <a href={siteConfig.url}>Children</a> &amp; Teens
             </h4>
