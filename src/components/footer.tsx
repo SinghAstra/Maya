@@ -1,17 +1,6 @@
 import Image from "next/image";
 import { Block } from "@/components/block";
-
-const TEAM = [
-  "Jennifer Anderson",
-  "Heather Williams-Baumgart",
-  "Autumn Bodily",
-  "Candace Bletscher",
-  "Samantha Johnson",
-  "Rosa Gomez",
-  "Chad Flores",
-  "Simran Sidhu",
-  "Jessica Jauregui",
-];
+import { TEAM } from "@/data/team";
 
 export function Footer() {
   return (
