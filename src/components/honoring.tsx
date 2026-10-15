@@ -7,7 +7,7 @@ export function Honoring() {
       <div className="container-page">
         <div className="fe-grid">
           <Block desktop="1/1/15/14" className="img-block" mobile="1/1/10/9">
-            <CoverImage src="/images/honoring.jpg" alt="Woman reading in soft window light" />
+            <CoverImage src="/images/honoring.jpg" alt="Woman cradling a leafy plant, a symbol of new growth" />
           </Block>
           <Block desktop="9/15/15/25" mobile="10/1/14/9">
             <h2>
