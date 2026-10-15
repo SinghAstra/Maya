@@ -5,7 +5,7 @@ export default defineConfig({
   timeout: 60_000,
   reporter: [["list"]],
   use: {
-    baseURL: "http://localhost:3000",
+    baseURL: "http://localhost:3001",
     channel: "msedge",
   },
   projects: [
@@ -14,8 +14,8 @@ export default defineConfig({
     { name: "desktop-1440", use: { viewport: { width: 1440, height: 900 } } },
   ],
   webServer: {
-    command: "npm run dev",
-    url: "http://localhost:3000",
+    command: "npm run dev -- -p 3001",
+    url: "http://localhost:3001",
     reuseExistingServer: true,
     timeout: 120_000,
   },
