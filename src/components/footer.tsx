@@ -1,56 +1,50 @@
-import Image from "next/image";
 import { Block } from "@/components/block";
-import { TEAM } from "@/data/team";
 import { siteConfig } from "@/config/site";
 
 export function Footer() {
   return (
     <footer className="section bg-white min-h-footer">
+      <span id="contact" className="block scroll-mt-header" />
       <div className="container-page">
         <div className="fe-grid">
           <Block desktop="1/1/5/8" mobile="2/1/5/9">
-            <Image src="/images/logo.png" alt="Conejo Valley Counseling" width={220} height={82}
-              className="h-auto w-full max-w-brand" />
+            <p className="wordmark">Dr. Maya Reynolds</p>
+            <p className="wordmark-sub">PsyD &middot; Clinical Psychology</p>
           </Block>
           <Block desktop="4/1/9/9" mobile="5/1/10/9" className="block-text">
             <p>
-              We want to make getting started simple. You&rsquo;re welcome to come into our office in Newbury Park or
-              schedule virtual appointments from anywhere in CA&mdash;whatever works best for you.
+              Getting started is simple. Book a free 15-minute consult, meet me in my quiet Santa Monica office, or
+              begin with a secure telehealth session from anywhere in California.
             </p>
           </Block>
           <Block desktop="1/11/6/15" mobile="10/2/15/8" className="block-text">
             <p><strong>Navigate</strong></p>
             <div className="footer-list">
               <a href="/">Home</a>
-              <a href={siteConfig.url}>About</a>
-              <a href={siteConfig.url}>FAQs</a>
-              <a href={siteConfig.url}>Contact</a>
+              <a href="#about">About</a>
+              <a href="#office">Our Office</a>
+              <a href="#faqs">FAQs</a>
             </div>
           </Block>
           <Block desktop="1/15/8/20" mobile="23/2/30/8" className="block-text">
-            <p><strong>Our Team</strong></p>
+            <p><strong>Services</strong></p>
             <div className="footer-list">
-              {TEAM.map((name) => (
-                <a key={name} href={siteConfig.url}>
-                  {name}
-                </a>
-              ))}
+              <a href="#services">Anxiety &amp; Panic</a>
+              <a href="#services">Trauma &amp; PTSD</a>
+              <a href="#services">Burnout &amp; Stress</a>
+              <a href="#services">Perfectionism</a>
             </div>
           </Block>
-          <Block desktop="1/20/10/25" mobile="15/2/23/8" className="block-text">
+          <Block desktop="1/20/10/25" mobile="15/2/23/8" className="block-text" >
             <p><strong>Contact</strong></p>
             <p>
-              925 Broadbeck Dr
+              123th Street 45 W
               <br />
-              Suites 200 and 225
+              Santa Monica, CA 90401
               <br />
-              Newbury Park, CA 91320
-              <br />
-              <a href="mailto:info@conejovalleycounseling.com">info@conejovalleycounseling.com</a>
-              <br />
-              <a href="tel:8052423120">805.242.3120</a>
+              <a href="mailto:hello@mareynoldspsych.com">hello@mareynoldspsych.com</a>
             </p>
-            <p>Serving Thousand Oaks, Westlake Village, Camarillo, Moorpark, &amp; Simi Valley</p>
+            <p>Serving Santa Monica, Venice, Beverly Hills, &amp; across California via telehealth</p>
           </Block>
         </div>
       </div>

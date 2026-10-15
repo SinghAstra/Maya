@@ -7,7 +7,7 @@ export function LegalBar() {
       <div className="container-page">
         <div className="fe-grid auto-rows-auto">
           <Block desktop="1/1/2/17" mobile="1/1/2/9" className="block-text">
-            <p>© 2025 Conejo Valley Family Counseling</p>
+            <p>&copy; 2025 Dr. Maya Reynolds, PsyD</p>
           </Block>
           <Block desktop="1/19/2/25" mobile="2/1/3/9" className="block-text">
             <p>

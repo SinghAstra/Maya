@@ -1,7 +1,6 @@
 import { Block } from "@/components/block";
 import { CoverImage } from "@/components/cover-image";
 import { UnderlineButton } from "@/components/underline-button";
-import { siteConfig } from "@/config/site";
 
 export function CallToAction() {
   return (
@@ -14,13 +13,13 @@ export function CallToAction() {
           <Block desktop="1/5/3/15" mobile="8/1/10/9">
             <p className="eyebrow">
               <strong>
-                <em>SCHEDULE AN APPOINTMENT</em>
+                <em>BOOK A FREE 15-MIN CONSULT</em>
               </strong>
             </p>
           </Block>
           <Block desktop="4/5/8/15" mobile="10/1/13/9">
             <h2>
-              Find a therapist who is the right fit for{" "}
+              Find a therapist who gets{" "}
               <strong>
                 <em>you</em>
               </strong>
@@ -29,15 +28,14 @@ export function CallToAction() {
           </Block>
           <Block desktop="8/5/14/15" mobile="13/1/21/9" className="block-text">
             <p>
-              Coming to therapy is a courageous decision, and connecting with the right kind of therapist makes all the
-              difference. We understand that your journey is personal, and we&rsquo;re here to support you with care and
-              understanding every step of the way. Each member of our team brings dedicated expertise and a commitment
-              to support you in your struggles. We want you to feel prioritized, understood, and empowered.
+              Reaching out is often the hardest step. Whether you&rsquo;ve been in therapy before or this is your first
+              time, I&rsquo;ll meet you where you are &mdash; with warmth, honesty, and a real understanding of what it
+              means to live and work in a fast-paced environment.
             </p>
-            <p>Click the button below to schedule an appointment.</p>
+            <p>In-person sessions in Santa Monica, or secure telehealth anywhere in California.</p>
           </Block>
           <Block desktop="14/5/16/15" mobile="21/1/23/9">
-            <UnderlineButton href={siteConfig.url}>Book now</UnderlineButton>
+            <UnderlineButton href="#contact">Book now</UnderlineButton>
           </Block>
           <Block desktop="1/17/16/25" className="img-block" mobile="24/2/32/9">
             <CoverImage src="/images/cta-2.jpg" alt="Welcoming therapy office" />

@@ -1,52 +1,49 @@
 import { Block } from "@/components/block";
 import { CoverImage } from "@/components/cover-image";
 import { UnderlineButton } from "@/components/underline-button";
-import { siteConfig } from "@/config/site";
 
 export function HowWeWork() {
   return (
-    <section className="section bg-accent">
+    <section id="approach" className="section bg-surface-tint">
       <div className="container-page">
         <div className="fe-grid">
           <Block desktop="4/2/6/14" mobile="3/1/5/9">
             <p className="eyebrow">
               <strong>
-                <em>HOW WE WORK</em>
+                <em>MY APPROACH</em>
               </strong>
             </p>
           </Block>
           <Block desktop="8/2/10/19" mobile="5/1/8/8">
-            <h2>We&rsquo;re here to make a difference.</h2>
+            <h2>Structured support, with room to go deep.</h2>
           </Block>
           <Block desktop="4/20/22/25" className="img-block" mobile="9/1/17/9">
-            <CoverImage src="/images/how-we-work.jpg" alt="Warm therapy office" />
+            <CoverImage src="/images/how-we-work.jpg" alt="Warm, naturally lit therapy space" />
           </Block>
           <Block desktop="11/2/20/10" mobile="18/1/28/9" className="block-text">
             <p>
-              The clients we work with are balancing so many things at once, it&rsquo;s often hard for them to put
-              themselves first.
+              The people I work with are balancing so much at once that putting themselves first can feel almost
+              impossible.
             </p>
             <p>
-              Here, your needs are always top priority. Our team takes the time to deeply listen to our clients in order
-              to truly understand their story and their struggles. We recognize that no two people are the same and
-              that personalized therapy means an intentional, tailored approach. (You won&rsquo;t find anything
-              &ldquo;one-size-fits-all&rdquo; here.) If you&rsquo;re ready to do the work, we&rsquo;re ready to help.
+              Here, your needs come first. I take time to deeply listen so I can understand your story rather than a
+              checklist of symptoms. No two people are the same, and therapy with me is never one-size-fits-all &mdash;
+              sessions are structured enough to feel supportive while leaving space for reflection and depth.
             </p>
           </Block>
           <Block desktop="11/10/20/18" mobile="28/1/38/9" className="block-text">
             <p>
-              Sometimes we may gently challenge you to look at things differently and other times we may explore your
-              emotions, all while encouraging you to practice what you&rsquo;ve learned in your daily life. We take what
-              we do seriously because we know how important it is for you to heal from what&rsquo;s hurting you,
-              discover a fulfilling life, and build meaningful relationships. Our goal is to walk alongside you in this
-              journey, offering support and guidance as you uncover your strengths and embrace what the future can hold
-              for you.
+              Sometimes I&rsquo;ll gently challenge you to see things differently; other times we&rsquo;ll slow down and
+              explore what you&rsquo;re feeling &mdash; always encouraging you to practice what you learn in daily life.
+            </p>
+            <p>
+              I integrate evidence-based methods such as cognitive-behavioral therapy, EMDR, mindfulness-based
+              practices, and body-oriented techniques, addressing both the emotional and physiological sides of what
+              you&rsquo;re experiencing.
             </p>
           </Block>
           <Block desktop="21/2/23/18" mobile="38/1/40/9">
-            <UnderlineButton href={siteConfig.url}>
-              Learn more about us
-            </UnderlineButton>
+            <UnderlineButton href="#about">Meet Dr. Reynolds</UnderlineButton>
           </Block>
         </div>
       </div>

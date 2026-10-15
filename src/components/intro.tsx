@@ -7,22 +7,25 @@ export function Intro() {
       <div className="container-page">
         <div className="fe-grid">
           <Block desktop="4/2/8/15" mobile="1/1/5/9">
-            <h2>You&rsquo;re holding onto hope that life can be better than it is right now.</h2>
+            <h2>You&rsquo;re carrying a lot &mdash; and part of you hopes it can feel lighter.</h2>
           </Block>
           <Block desktop="9/2/16/9" mobile="5/1/13/9" className="block-text">
-            <p>At Conejo Valley Family Counseling we want to make that hope a reality.</p>
+            <p>That hope is worth following. I&rsquo;m Dr. Maya Reynolds, a licensed clinical psychologist in Santa Monica.</p>
             <p>
-              Whether you&rsquo;re an adult seeking personal growth, looking to work through your trauma, a couple
-              working on your relationship, or a parent looking for support for your child, we provide a compassionate
-              and safe space to help you navigate all of life&rsquo;s ups and downs.
+              Many of the people I work with look functional on the outside while quietly battling constant worry,
+              tension, poor sleep, or the lingering weight of earlier experiences. Together we make sense of what
+              you&rsquo;re carrying and build a steadier way forward.
             </p>
           </Block>
           <Block desktop="9/9/17/16" mobile="22/1/29/9" className="block-text">
             <p>
-              First and foremost, we believe what you&rsquo;re going through is real, valid, and worthy of support. Our
-              team offers clients in the Newbury Park area and across CA an environment to discover a new life and a
-              deeper sense of self in the midst of their struggles. As we tap into the power of connection and
-              understanding, you can find your footing again and take a transformative path forward.
+              My approach is warm, collaborative, and grounded &mdash; structured enough to feel supportive, with room
+              for reflection and depth. I integrate cognitive-behavioral therapy, EMDR, mindfulness, and body-oriented
+              techniques so we address both the emotional and physical sides of what you&rsquo;re experiencing.
+            </p>
+            <p>
+              My goal is more than symptom relief: it&rsquo;s helping you build insight, resilience, and a stronger
+              relationship with yourself over time.
             </p>
           </Block>
           <Block desktop="1/18/17/25" className="img-block" mobile="14/1/21/9">

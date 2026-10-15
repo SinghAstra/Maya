@@ -5,7 +5,7 @@ import { SPECIALTIES } from "@/data/specialties";
 
 export function Specialties() {
   return (
-    <section className="section bg-white">
+    <section id="specialties" className="section bg-white">
       <div className="container-page">
         <div className="fe-grid">
           <Block desktop="3/2/7/9" mobile="3/1/5/9">

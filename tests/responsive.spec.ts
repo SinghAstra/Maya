@@ -3,11 +3,11 @@ import { test, expect } from "@playwright/test";
 test.describe("homepage responsiveness", () => {
   test("all core sections render", async ({ page }) => {
     await page.goto("/");
-    await expect(page.getByRole("heading", { level: 1 })).toContainText("Rebuild your foundation");
-    await expect(page.getByRole("heading", { level: 2 }).first()).toContainText("holding onto hope");
-    await expect(page.getByText("Who we", { exact: false }).first()).toBeVisible();
+    await expect(page.getByRole("heading", { level: 1 })).toContainText("move through anxiety, trauma");
+    await expect(page.getByRole("heading", { level: 2 }).first()).toContainText("carrying a lot");
+    await expect(page.getByText("How I", { exact: false }).first()).toBeVisible();
     await expect(page.getByText("Our specialties", { exact: false }).first()).toBeVisible();
-    await expect(page.getByText("925 Broadbeck Dr")).toBeVisible();
+    await expect(page.getByText("123th Street 45 W").first()).toBeVisible();
   });
 
   test("section background themes match the original", async ({ page }) => {
@@ -17,7 +17,7 @@ test.describe("homepage responsiveness", () => {
         const cls = s.className;
         if (cls.includes("bg-cream")) return "cream";
         if (cls.includes("bg-quote")) return "quote";
-        if (cls.includes("bg-accent")) return "peach";
+        if (cls.includes("bg-surface-tint")) return "tint";
         if (cls.includes("bg-white")) return "white";
         return getComputedStyle(s).backgroundColor;
       })
@@ -28,8 +28,11 @@ test.describe("homepage responsiveness", () => {
       "white",
       "quote",
       "white",
-      "peach",
+      "tint",
+      "cream",
       "white",
+      "white",
+      "tint",
       "white",
       "cream",
     ]);
@@ -54,8 +57,8 @@ test.describe("homepage responsiveness", () => {
       await expect(burger).toBeVisible();
       await burger.click();
       await expect(page.getByRole("button", { name: "Close menu" })).toBeVisible();
-      await expect(page.getByRole("button", { name: "Our Team" })).toBeVisible();
-      await page.getByRole("button", { name: "Our Team" }).click();
+      await expect(page.getByRole("button", { name: "Specialties" })).toBeVisible();
+      await page.getByRole("button", { name: "Specialties" }).click();
       await expect(page.getByRole("button", { name: /Back/ })).toBeVisible();
       const transition = await page.evaluate(() => {
         const navs = [...document.querySelectorAll("nav")].filter((n) => n.className.includes("menu-slide"));
@@ -64,9 +67,9 @@ test.describe("homepage responsiveness", () => {
       for (const prop of transition) {
         expect(prop).toContain("translate");
       }
-      await expect(page.getByRole("link", { name: "Jennifer Anderson, LMFT" })).toBeVisible();
+      await expect(page.getByRole("link", { name: "Anxiety", exact: true })).toBeVisible();
       await page.getByRole("button", { name: /Back/ }).click();
-      await expect(page.getByRole("button", { name: "Our Team" })).toBeVisible();
+      await expect(page.getByRole("button", { name: "Specialties" })).toBeVisible();
       await page.getByRole("button", { name: "Close menu" }).click();
       await expect(page.getByRole("button", { name: "Close menu" })).toBeHidden();
     }

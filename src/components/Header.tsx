@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { DesktopNav } from "@/components/desktop-nav";
 import { MobileMenu } from "@/components/mobile-menu";
@@ -12,9 +11,9 @@ export default function Header() {
   return (
     <header className="absolute top-0 left-0 z-50 h-header w-full">
       <div className="relative z-50 h-full flex items-center justify-between bg-cream px-header-x">
-        <Link href="/" aria-label="Conejo Valley Family Counseling home" className="shrink-0">
-          <Image src="/images/logo.png" alt="Conejo Valley Counseling" width={200} height={75} priority
-            className="h-logo w-auto" />
+        <Link href="/" aria-label="Dr. Maya Reynolds home" className="shrink-0">
+          <span className="wordmark">Dr. Maya Reynolds</span>
+          <span className="wordmark-sub">PsyD &middot; Clinical Psychology</span>
         </Link>
 
         <DesktopNav />

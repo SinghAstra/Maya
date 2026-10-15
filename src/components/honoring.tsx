@@ -15,7 +15,7 @@ export function Honoring() {
               <strong>
                 <em>&amp;</em>
               </strong>{" "}
-              helping shape where you&rsquo;re headed.
+              finding your footing ahead.
             </h2>
           </Block>
         </div>
