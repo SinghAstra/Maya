@@ -15,7 +15,7 @@ export function Hero() {
               </strong>
             </p>
           </Block>
-          <Block desktop="7/11/15/23" mobile="5/1/12/9">
+          <Block desktop="7/11/15/23" mobile="5/1/12/9" className="max-md:mt-14">
             <h1>
               Rebuild your foundation on solid ground and finally begin to{" "}
               <strong>
@@ -27,7 +27,7 @@ export function Hero() {
               Specialized therapy for adults, couples, teens, and children to reflect, heal, and grow.
             </p>
           </Block>
-          <Block desktop="15/11/17/23" mobile="12/1/14/9">
+          <Block desktop="15/11/17/23" mobile="12/1/14/9" className="max-md:mt-14 max-md:mb-16">
             <UnderlineButton href={siteConfig.url}>Book an Appointment</UnderlineButton>
           </Block>
           <Block desktop="2/1/17/9" className="img-block" mobile="15/1/24/7">
