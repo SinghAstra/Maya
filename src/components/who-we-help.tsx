@@ -39,7 +39,7 @@ export function WhoWeHelp() {
             </p>
           </Block>
           <Block desktop="4/18/15/25" className="img-block" mobile="38/1/47/9">
-            <CoverImage src="/images/children.jpg" alt="A professional taking a thoughtful pause at work" />
+            <CoverImage src="/images/children.jpg" alt="A quiet meditation in soft window light" />
           </Block>
           <Block desktop="16/18/22/25" mobile="48/1/54/9" className="block-text">
             <h4>
