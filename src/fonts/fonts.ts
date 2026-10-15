@@ -10,10 +10,7 @@ export const beaufort = localFont({
 });
 
 export const muli = localFont({
-  src: [
-    { path: "./muli-300.woff2", style: "normal", weight: "300 400" },
-    { path: "./muli-300-italic.woff2", style: "italic", weight: "300 400" },
-  ],
+  src: [{ path: "./muli-300.woff2", style: "normal", weight: "300 400" }],
   variable: "--font-muli",
   display: "swap",
 });

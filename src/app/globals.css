@@ -165,15 +165,6 @@
     color: var(--color-teal);
   }
 
-  .sqsrte-large strong em {
-    font-size: 1em;
-    font-style: normal !important;
-    font-weight: 400 !important;
-    letter-spacing: var(--ls-caps);
-    text-transform: uppercase !important;
-    font-family: var(--font-muli), sans-serif;
-  }
-
   a {
     color: inherit;
     text-decoration: none;
@@ -370,7 +361,7 @@
   }
 
   .contact-pill {
-    @apply rounded-full border border-neutral-400 uppercase font-normal tracking-caps w-fit mx-auto text-menu-contact text-neutral-500 px-pill-x py-pill-y;
+    @apply rounded-full bg-accent text-ink uppercase font-normal tracking-caps w-fit mx-auto text-menu-contact px-pill-x py-pill-y transition-opacity hover:opacity-85;
   }
 
   .menu-item {

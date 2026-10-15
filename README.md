@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dr. Maya Reynolds, PsyD — Practice Website
 
-## Getting Started
+A single-page website for an imaginary Santa Monica therapist, built as part of the Grow My Therapy front-end internship assignment. It started as a faithful clone of the Conejo Valley Family Counseling homepage, then was redesigned around Dr. Maya Reynolds' profile: new color palette, all-new copy and imagery, plus two added sections (About and Our Office).
 
-First, run the development server:
+## Tech
+
+- Next.js 16 (App Router) + React 19
+- Tailwind CSS v4, styled through a design-token system in `src/app/globals.css`
+- Local fonts (Beaufort for headings, Muli for body, a script accent face)
+- Playwright for responsive testing
+
+## Run it
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Test it
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run test
+```
 
-## Learn More
+Runs the Playwright suite at 390px, 768px, and 1440px: section order and background themes, navigation and mobile menu behavior, image loading, overflow, and interaction rules. The dev server must be running on port 3001 (the config starts one if it is missing).
 
-To learn more about Next.js, take a look at the following resources:
+## Project structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/app` — page, layout, global styles (all color/spacing/typography tokens live in `globals.css`)
+- `src/components` — one file per page section, plus small shared pieces (block, cover-image, underline-button, header/nav/menu)
+- `src/data` — content and grid placements: nav, expertise, specialties, FAQs
+- `src/config/site.ts` — the single source for site name, description, and URL; every link is built from it
+- `tests` — responsive Playwright suite

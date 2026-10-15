@@ -1,5 +1,5 @@
 import { Block } from "@/components/block";
-import { siteConfig } from "@/config/site";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -20,7 +20,7 @@ export function Footer() {
           <Block desktop="1/11/6/15" mobile="10/2/15/8" className="block-text">
             <p><strong>Navigate</strong></p>
             <div className="footer-list">
-              <a href="/">Home</a>
+              <Link href="/">Home</Link>
               <a href="#about">About</a>
               <a href="#office">Our Office</a>
               <a href="#faqs">FAQs</a>

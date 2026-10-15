@@ -33,7 +33,7 @@ export function MobileMenu() {
                   className="flex items-center gap-4 text-left menu-item"
                 >
                   {item.label}
-                  <span className="text-neutral-400 text-chevron">›</span>
+                  <span className="text-line text-chevron">›</span>
                 </button>
               ) : (
                 <a key={item.label} href={item.href} className="menu-item">
