@@ -1,13 +1,15 @@
 import type { CSSProperties, ReactNode } from "react";
 
+export type GridArea = `${number}/${number}/${number}/${number}`;
+
 export function Block({
   desktop,
   mobile,
   className = "",
   children,
 }: {
-  desktop: string;
-  mobile: string;
+  desktop: GridArea;
+  mobile: GridArea;
   className?: string;
   children?: ReactNode;
 }) {

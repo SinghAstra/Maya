@@ -1,9 +1,11 @@
+import type { GridArea } from "@/components/block";
+
 export type Specialty = {
   title: string;
   href: string;
   body: string;
-  desktop: { card: string; button: string };
-  mobile: { card: string; button: string };
+  desktop: { card: GridArea; button: GridArea };
+  mobile: { card: GridArea; button: GridArea };
 };
 
 export const SPECIALTIES: Specialty[] = [

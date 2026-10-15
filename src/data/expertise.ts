@@ -1,7 +1,9 @@
+import type { GridArea } from "@/components/block";
+
 export type ExpertiseItem = {
   label: string;
-  desktop: { text: string; rule?: string };
-  mobile: { text: string; rule?: string };
+  desktop: { text: GridArea; rule?: GridArea };
+  mobile: { text: GridArea; rule?: GridArea };
 };
 
 export const EXPERTISE_COLUMN_ONE: ExpertiseItem[] = [

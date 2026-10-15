@@ -1,8 +1,10 @@
+import type { GridArea } from "@/components/block";
+
 export type Faq = {
   question: string;
   answer: string;
-  desktop: string;
-  mobile: string;
+  desktop: GridArea;
+  mobile: GridArea;
 };
 
 export const FAQS: Faq[] = [
