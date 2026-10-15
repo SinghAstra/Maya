@@ -1,6 +1,6 @@
 # Dr. Maya Reynolds, PsyD — Practice Website
 
-A single-page website for an imaginary Santa Monica therapist, built as part of the Grow My Therapy front-end internship assignment. It started as a faithful clone of the Conejo Valley Family Counseling homepage, then was redesigned around Dr. Maya Reynolds' profile: new color palette, all-new copy and imagery, plus two added sections (About and Our Office).
+A single-page website for an imaginary Santa Monica therapist.
 
 ## Tech
 
