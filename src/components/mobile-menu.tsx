@@ -41,9 +41,7 @@ export function MobileMenu() {
                 </a>
               )
             )}
-          </div>
-          <div className="absolute bottom-8 inset-x-0 flex justify-center">
-            <a href={CONTACT_HREF} className="contact-pill">
+             <a href={CONTACT_HREF} className="contact-pill">
               Contact
             </a>
           </div>

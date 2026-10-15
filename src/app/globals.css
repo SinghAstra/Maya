@@ -369,7 +369,7 @@ select {
 }
 
 .contact-pill {
-  @apply rounded-full border border-neutral-400 uppercase font-normal tracking-caps text-menu-contact text-neutral-500 px-pill-x py-pill-y;
+  @apply rounded-full border border-neutral-400 uppercase font-normal tracking-caps w-fit mx-auto text-menu-contact text-neutral-500 px-pill-x py-pill-y;
 }
 
 .menu-item {
@@ -377,7 +377,7 @@ select {
 }
 
 @utility menu-slide {
-  transition-property: transform;
+  transition-property: transform, translate;
   transition-duration: var(--duration-slide);
   transition-timing-function: var(--ease-slide);
 }

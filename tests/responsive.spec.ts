@@ -32,6 +32,13 @@ test.describe("homepage responsiveness", () => {
       await expect(page.getByRole("button", { name: "Our Team" })).toBeVisible();
       await page.getByRole("button", { name: "Our Team" }).click();
       await expect(page.getByRole("button", { name: /Back/ })).toBeVisible();
+      const transition = await page.evaluate(() => {
+        const navs = [...document.querySelectorAll("nav")].filter((n) => n.className.includes("menu-slide"));
+        return navs.map((n) => getComputedStyle(n).transitionProperty);
+      });
+      for (const prop of transition) {
+        expect(prop).toContain("translate");
+      }
       await expect(page.getByRole("link", { name: "Jennifer Anderson, LMFT" })).toBeVisible();
       await page.getByRole("button", { name: /Back/ }).click();
       await expect(page.getByRole("button", { name: "Our Team" })).toBeVisible();
