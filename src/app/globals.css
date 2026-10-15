@@ -331,6 +331,15 @@
   .block-text h4 + p {
     margin-top: var(--block-gap);
   }
+  #faqs .block-text {
+    padding-bottom: var(--block-gap);
+  }
+  #faqs .block-text h4 + p {
+    margin-top: calc(var(--block-gap) * 0.35);
+  }
+  #faqs h3 {
+    margin-bottom: var(--block-gap);
+  }
 
   .footer-list a {
     display: block;
