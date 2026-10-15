@@ -18,7 +18,7 @@ export function HowWeWork() {
             <h2>Structured support, with room to go deep.</h2>
           </Block>
           <Block desktop="4/20/22/25" className="img-block" mobile="9/1/17/9">
-            <CoverImage src="/images/how-we-work.jpg" alt="Warm, naturally lit therapy space" />
+            <CoverImage src="/images/how-we-work.jpg" alt="Journaling beside a cup of coffee in warm light" />
           </Block>
           <Block desktop="11/2/20/10" mobile="18/1/28/9" className="block-text">
             <p>

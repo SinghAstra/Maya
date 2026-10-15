@@ -2,7 +2,7 @@ import { Block } from "@/components/block";
 
 export function Quote() {
   return (
-    <section className="section sec-medium bg-quote">
+    <section className="section sec-medium bg-quote-surface">
       <div className="container-page">
         <div className="fe-grid">
           <Block desktop="5/2/11/18" mobile="1/1/3/9">

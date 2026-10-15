@@ -15,7 +15,7 @@ export function WhoWeHelp() {
             </h2>
           </Block>
           <Block desktop="4/4/15/11" className="img-block" mobile="4/1/13/9">
-            <CoverImage src="/images/adults.jpg" alt="Adults in therapy" />
+            <CoverImage src="/images/adults.jpg" alt="A quiet, contemplative moment by the sea" />
           </Block>
           <Block desktop="16/4/21/11" mobile="14/1/20/9" className="block-text">
             <h4>Anxiety &amp; Panic Relief</h4>
@@ -26,7 +26,7 @@ export function WhoWeHelp() {
             </p>
           </Block>
           <Block desktop="4/11/15/18" className="img-block" mobile="21/1/30/9">
-            <CoverImage src="/images/couples.jpg" alt="Couple in therapy" />
+            <CoverImage src="/images/couples.jpg" alt="Hands held in a gentle, caring gesture" />
           </Block>
           <Block desktop="16/11/22/18" mobile="31/1/37/9" className="block-text">
             <h4>
@@ -39,7 +39,7 @@ export function WhoWeHelp() {
             </p>
           </Block>
           <Block desktop="4/18/15/25" className="img-block" mobile="38/1/47/9">
-            <CoverImage src="/images/children.jpg" alt="Child and parent in a calm moment" />
+            <CoverImage src="/images/children.jpg" alt="A professional taking a thoughtful pause at work" />
           </Block>
           <Block desktop="16/18/22/25" mobile="48/1/54/9" className="block-text">
             <h4>

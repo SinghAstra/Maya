@@ -31,7 +31,7 @@ export function Hero() {
             <UnderlineButton href="#contact">Book an Appointment</UnderlineButton>
           </Block>
           <Block desktop="2/1/17/9" className="img-block" mobile="15/1/24/7">
-            <CoverImage src="/images/hero-1.jpg" alt="Counselor speaking with a client" />
+            <CoverImage src="/images/hero-1.jpg" alt="Woman pausing with a warm drink by the window" />
           </Block>
           <Block desktop="7/24/17/25" className="img-block" mobile="18/8/24/9">
             <CoverImage src="/images/hero-2.jpg" alt="" />

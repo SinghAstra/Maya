@@ -9,7 +9,6 @@
   --color-teal: #6f8f7f;
   --color-line: #b8ac93;
   --color-quote: #f4f1ea;
-  --color-quote-overlay: rgb(38 48 43 / 58%);
 
   --max-page-width: 1800px;
   --page-padding: 5vw;
@@ -298,9 +297,8 @@
     flex-direction: column;
     justify-content: center;
   }
-  .bg-quote {
-    background: linear-gradient(var(--color-quote-overlay), var(--color-quote-overlay)),
-      url("/images/quote-bg.png") center / cover no-repeat, var(--color-ink);
+  .bg-quote-surface {
+    background: var(--color-ink);
   }
 
   .eyebrow {

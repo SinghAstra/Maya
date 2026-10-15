@@ -38,7 +38,7 @@ export function CallToAction() {
             <UnderlineButton href="#contact">Book now</UnderlineButton>
           </Block>
           <Block desktop="1/17/16/25" className="img-block" mobile="24/2/32/9">
-            <CoverImage src="/images/cta-2.jpg" alt="Welcoming therapy office" />
+            <CoverImage src="/images/cta-2.jpg" alt="A calm, light-filled corner with soft seating" />
           </Block>
         </div>
       </div>
