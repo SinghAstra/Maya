@@ -6,7 +6,7 @@ export function Quote() {
       <div className="container-page">
         <div className="fe-grid">
           <Block desktop="5/2/11/18" mobile="1/1/3/9">
-            <h2 className="quote-text">
+            <h2 className="text-quote">
               You deserve a place where your story is heard, valued, and understood.{" "}
               <em>Nothing will be too heavy for us to carry together.</em>
             </h2>

@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 
 export function Hero() {
   return (
-    <section className="section section-first bg-cream">
+    <section className="section bg-cream">
       <div className="container-page">
         <div className="fe-grid">
           <Block desktop="2/11/4/19" mobile="2/1/5/9">

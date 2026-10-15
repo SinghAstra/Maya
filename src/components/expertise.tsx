@@ -9,7 +9,7 @@ function ExpertiseColumn({ items }: { items: ExpertiseItem[] }) {
         <Fragment key={item.label}>
           {item.desktop.rule && (
             <Block desktop={item.desktop.rule} mobile={item.mobile.rule!}>
-              <div className="rule-block" />
+              <div className="h-px w-full bg-line" />
             </Block>
           )}
           <Block desktop={item.desktop.text} mobile={item.mobile.text} className="block-text">
