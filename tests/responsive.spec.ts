@@ -10,6 +10,31 @@ test.describe("homepage responsiveness", () => {
     await expect(page.getByText("925 Broadbeck Dr")).toBeVisible();
   });
 
+  test("section background themes match the original", async ({ page }) => {
+    await page.goto("/");
+    const bgs = await page.evaluate(() =>
+      [...document.querySelectorAll("section")].map((s) => {
+        const cls = s.className;
+        if (cls.includes("bg-cream")) return "cream";
+        if (cls.includes("bg-quote")) return "quote";
+        if (cls.includes("bg-accent")) return "peach";
+        if (cls.includes("bg-white")) return "white";
+        return getComputedStyle(s).backgroundColor;
+      })
+    );
+    expect(bgs).toEqual([
+      "cream",
+      "cream",
+      "white",
+      "quote",
+      "white",
+      "peach",
+      "white",
+      "white",
+      "cream",
+    ]);
+  });
+
   test("no horizontal overflow", async ({ page }) => {
     await page.goto("/");
     const widths = await page.evaluate(() => ({

@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 
 export function HowWeWork() {
   return (
-    <section className="section bg-peach">
+    <section className="section bg-accent">
       <div className="container-page">
         <div className="fe-grid">
           <Block desktop="4/2/6/14" mobile="3/1/5/9">
